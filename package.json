@@ -1,0 +1,14 @@
+{
+  "name": "giftgenie",
+  "version": "0.1.0",
+  "description": "GiftGenie: AI gift & date planner powered by Qloo's Taste AI",
+  "license": "MIT",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "smoke": "node scripts/smoke.js"
+  },
+  "engines": { "node": ">=20" }
+}

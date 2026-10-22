@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GiftGenie — AI Gift &amp; Date Planner</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎁</text></svg>" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="logo">🎁</span> GiftGenie <small>AI gift &amp; date planner</small></div>
+    <div id="status" class="status"></div>
+  </header>
+
+  <main class="layout">
+    <section class="panel form-panel">
+      <h1>Plan something they'll <em>actually</em> love.</h1>
+      <p class="lead">Tell GiftGenie a few things your person loves. It reads Qloo's taste graph across film, music, books, brands and dining to build a plan — with the reason behind every pick.</p>
+
+      <form id="form">
+        <div class="seg" role="radiogroup" aria-label="Occasion">
+          <label><input type="radio" name="occasion" value="both" checked /><span>Date + gift</span></label>
+          <label><input type="radio" name="occasion" value="date" /><span>Date night</span></label>
+          <label><input type="radio" name="occasion" value="gift" /><span>Gift only</span></label>
+        </div>
+
+        <label class="field"><span>🎬 Movies they love</span><input name="movies" placeholder="Amélie, Spirited Away" /></label>
+        <label class="field"><span>🎵 Music / artists</span><input name="music" placeholder="Beach House, Norah Jones" /></label>
+        <label class="field"><span>📚 Books <i>(optional)</i></span><input name="books" placeholder="Norwegian Wood" /></label>
+        <label class="field"><span>🍜 Favourite food</span><input name="food" placeholder="Japanese, dessert" /></label>
+        <div class="row">
+          <label class="field"><span>📍 City</span><input name="city" placeholder="Hong Kong" /></label>
+          <label class="field"><span>💰 Budget</span>
+            <select name="budget"><option value="mid">$$ Comfortable</option><option value="low">$ Casual</option><option value="high">$$$$ Splurge</option></select>
+          </label>
+        </div>
+        <div class="actions">
+          <button type="submit" class="primary" id="go">✨ Build the plan</button>
+          <button type="button" class="ghost" id="example">Try an example</button>
+        </div>
+        <p class="privacy">Only cultural titles and a city are sent to Qloo — never names or personal data.</p>
+      </form>
+    </section>
+
+    <section class="panel results" id="results">
+      <div class="empty">
+        <div class="big">💡</div>
+        <p>Your plan will appear here: a timeline for the evening, a gift shortlist, and a transparent log of every Qloo call that powered it.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Built for the Qloo Agentic Hackathon · Recommendations by <a href="https://www.qloo.com" target="_blank" rel="noopener">Qloo Taste AI™</a> · MIT licensed</footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
