@@ -36,7 +36,7 @@ npm run smoke            # end-to-end test in mock mode
 | Env var | Purpose |
 | --- | --- |
 | `QLOO_API_KEY` | Qloo event key. **Empty = mock mode** (offline fixture data shaped like real responses). |
-| `QLOO_BASE_URL` | Defaults to `https://api.qloo.com` (same as the official `@qloo/qloo-harness`). Change it if the organisers give you a different host. |
+| `QLOO_BASE_URL` | Defaults to `https://hackathon.api.qloo.com`. Hackathon keys return 401 against `https://api.qloo.com`. Set this to use a different host. |
 | `QLOO_MOCK=1` | Force mock mode even when a key is set. |
 | `LLM_API_KEY` | Optional. Any OpenAI-compatible Chat Completions API (default OpenAI `gpt-4o-mini`). Empty = deterministic planner. |
 | `LLM_BASE_URL`, `LLM_MODEL` | Point at another OpenAI-compatible provider. |
